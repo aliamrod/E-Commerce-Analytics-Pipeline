@@ -80,7 +80,7 @@ ecommerce-analytics-pipeline/
 │   ├── load_data.py  # Python script for data extraction
 │
 └── README.md
-
+```
 
 ---
 
