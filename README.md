@@ -94,6 +94,12 @@ SQLite is bundled with Python. To check:
 sqlite3 --version
 ```
 
+Install required libraries by following the command prompt
+```bash
+pip install -r requirements.txt
+
+```
+
 --- 
 ## Exploratory Analysis and Statistics
 
