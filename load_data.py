@@ -1,5 +1,7 @@
 import pandas as pd 
 import sqlite3 
+from geopy.geocoders import Nominatim
+
 # % cd /Users/aliamahama-rodriguez/project_dir
 
 # Load CSV data onto workspace
@@ -84,34 +86,9 @@ else:
 print("\nConclusion:")
 print(conclusion)
 
-# Add informative data//feature engineering
 orders['order_date'] = pd.to_datetime(orders['order_date'])
 orders['days_since_order'] = (pd.to_datetime('today') - orders['order_date']).dt.days
 orders['order_month'] = orders['order_date'].dt.month
 print(orders.head())
 
-
-## ML: Random Forest
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, confusion_matrix
-
-# Encoding categorical variables
-orders['order_status_encoded'] = orders['order_status'].map({'Completed': 0, 'Pending': 1, 'Cancelled': 2})
-orders = pd.get_dummies(orders, columns=['order_duration'], drop_first=True)
-
-# Split data into features (X) and target (y)
-X = orders[['days_since_order', 'order_month'] + [col for col in orders.columns if 'order_duration' in col]]
-y = orders['order_status_encoded']
-
-# Train-test split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Train the model
-model = RandomForestClassifier(n_estimators=100, random_state=42)
-model.fit(X_train, y_train)
-
-# Predict and evaluate
-y_pred = model.predict(X_test)
-print(confusion_matrix(y_test, y_pred))
-print(classification_report(y_test, y_pred))
+print(products.head())
