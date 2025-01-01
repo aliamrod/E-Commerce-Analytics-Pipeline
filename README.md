@@ -117,3 +117,6 @@ Now that we've explored the data and conducted basic statistical analysis, we ca
 
 ** Database optimization and additional analysis --> optimize SQLite database for large-scale data by creating appropriate indexes. Additionally, perform statistical analysis or time-series forecasting based on available order data (i.e., predicting future trends in order status or customer behavior). 
 
+
+![Screenshot 2025-01-01 at 9 18 29 PM](https://github.com/user-attachments/assets/b20a0c28-5b49-49d8-a79d-9088ecd0455f)
+
