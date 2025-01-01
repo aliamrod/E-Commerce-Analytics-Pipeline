@@ -93,3 +93,10 @@ SQLite is bundled with Python. To check:
 ```bash
 sqlite3 --version
 ```
+
+--- 
+## Exploratory Analysis and Statistics
+
+At this point, we have walked through the process of setting up a data pipeline that integrates raw data files into a SQLite database for analysis. We started by importing and cleaning data from CSV files into pandas DataFrames, then loaded this data into SQLite tables using Python's SQLite3 library. Once the data was successfully stored in the database, we utilized SQL queries to retrieve the data into pandas for further analysis. The dataset contained information about customer orders, including their status (Completed, Pending, Cancelled), which laid the foundation for exploring patterns in order processing.
+
+We then conducted exploratory data analysis (EDA) to better understand the distribution of order statuses and gain insights into trends. Using Python's pandas and matplotlib, we visualized the frequency of each order status to identify any potential imbalances. To dive deeper into the relationships between the status categories, we applied a Chi-Square Test of Independence to assess whether the order status distribution differed significantly from a uniform distribution. The test returned a p-value of 0.257, suggesting that the observed distribution of statuses (Completed, Pending, Cancelled) does not significantly differ from what would be expected by chance, implying that the differences in order statuses may be attributed to random variation. This statistical analysis provides a better understanding of how orders are distributed and whether external factors might be influencing the data.
