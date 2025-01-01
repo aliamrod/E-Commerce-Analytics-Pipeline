@@ -1,0 +1,8 @@
+pandas
+matplotlib
+seaborn
+scipy
+sqlite3
+streamlit
+apache-airflow
+dbt
