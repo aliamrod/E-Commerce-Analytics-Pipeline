@@ -100,3 +100,14 @@ sqlite3 --version
 At this point, we have walked through the process of setting up a data pipeline that integrates raw data files into a SQLite database for analysis. We started by importing and cleaning data from CSV files into pandas DataFrames, then loaded this data into SQLite tables using Python's SQLite3 library. Once the data was successfully stored in the database, we utilized SQL queries to retrieve the data into pandas for further analysis. The dataset contained information about customer orders, including their status (Completed, Pending, Cancelled), which laid the foundation for exploring patterns in order processing.
 
 We then conducted exploratory data analysis (EDA) to better understand the distribution of order statuses and gain insights into trends. Using Python's pandas and matplotlib, we visualized the frequency of each order status to identify any potential imbalances. To dive deeper into the relationships between the status categories, we applied a Chi-Square Test of Independence to assess whether the order status distribution differed significantly from a uniform distribution. The test returned a p-value of 0.257, suggesting that the observed distribution of statuses (Completed, Pending, Cancelled) does not significantly differ from what would be expected by chance, implying that the differences in order statuses may be attributed to random variation. This statistical analysis provides a better understanding of how orders are distributed and whether external factors might be influencing the data.
+
+Now that we've explored the data and conducted basic statistical analysis, we can move forward with further enhancing the project. Here, I've broken it down into the following steps:
+
+** Advanced data transformations and feature engineering--> calculating additional features like days_since_order or order_month (i.e., calculate how many days have passed since the order was placed and when the order was created). 
+
+** Machine Learning Model --> predicting order status. Based on historical data, we can build a classification model to predict the order_status (i.e., whether an order is likely to be completed, pending, or cancelled). We can use Logistic Regression, Random Forest, or XGBoost for this task.
+
+** Visualizing and communicating insights --> create interactive visualizations using libraries like seaborn, plotly, or Tableau to communicate key insights, such as distribution of orders by month, order status over time, or the correlation between features. Moreover, we could possibly integrate Streamlit to build a web app to showcase findings interactively.
+
+** Database optimization and additional analysis --> optimize SQLite database for large-scale data by creating appropriate indexes. Additionally, perform statistical analysis or time-series forecasting based on available order data (i.e., predicting future trends in order status or customer behavior). 
+
