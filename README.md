@@ -1,6 +1,5 @@
 # E-Commerce-Analytics-Pipeline
 
-# E-commerce Analytics Data Pipeline
 
 ## Objective
 The objective of this project is to build a data pipeline that automates the extraction, transformation, and loading (ETL) of e-commerce data to generate meaningful analytics. This pipeline simulates a real-world data engineering scenario, transforming raw data into insights such as top-performing products, customer trends, and order analysis.
