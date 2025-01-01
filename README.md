@@ -80,3 +80,16 @@ ecommerce-analytics-pipeline/
 │   ├── load_data.py  # Python script for data extraction
 │
 └── README.md
+
+
+---
+
+### Directions
+
+#### Install SQLite
+
+SQLite is bundled with Python. To check:
+
+```bash
+sqlite3 --version
+```
